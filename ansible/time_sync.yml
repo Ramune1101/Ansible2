@@ -1,0 +1,9 @@
+---
+- name: time synchronization
+  hosts: all
+  vars:
+    timesync_ntp_servers:
+    - hostname: ntp.kornet.net
+      iburst: true
+  roles:
+  - rhel-system-roles.timesync

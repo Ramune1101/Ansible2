@@ -1,0 +1,20 @@
+---
+- name: Install packages
+  hosts: dev,test,prod
+  tasks:
+  - name: Install the packages
+    yum: 
+      name: 
+      - php
+      - mariadb
+      state: present
+ 
+- name: Install packaegs 2
+  hosts: dev
+  tasks:
+  - name: Install the packages
+    yum:
+      name:
+      - "@Development tools"
+      - "iotop"
+      state: present
